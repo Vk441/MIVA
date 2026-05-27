@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
 
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "miva2026";
 const COOKIE_NAME = "miva_admin_session";
 
 export async function checkAuth() {
@@ -10,7 +9,8 @@ export async function checkAuth() {
 }
 
 export async function login(password: string) {
-  if (password === ADMIN_PASSWORD) {
+  const adminPassword = process.env.ADMIN_PASSWORD || "miva2026";
+  if (password === adminPassword) {
     const cookieStore = await cookies();
     cookieStore.set(COOKIE_NAME, "authenticated", {
       httpOnly: true,
