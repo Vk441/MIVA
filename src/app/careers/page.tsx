@@ -1,5 +1,6 @@
 import { getActiveJobs } from "@/app/actions";
 import CareerApplicationForm from "@/components/CareerApplicationForm";
+import InteractiveJobsList from "@/components/InteractiveJobsList";
 import Image from "next/image";
 import { Metadata } from "next";
 
@@ -79,28 +80,11 @@ export default async function CareersPage() {
           Open roles ({jobs.length})
         </h2>
         <p className="text-gray-400 font-light text-sm mb-12">
-          Explore our current openings and join us in building the future of aviation.
+          Explore our openings and select a position to see full details and apply.
         </p>
         
-        <div className="space-y-4 mb-24">
-          {jobs.length === 0 ? (
-            <p className="text-gray-500 font-light text-sm italic">No open positions currently available.</p>
-          ) : (
-            jobs.map((job: any) => (
-              <div key={job.id} className="bg-[#131316] border border-white/5 rounded-xl p-6 flex flex-col md:flex-row justify-between md:items-center gap-6 group hover:border-white/20 transition-colors">
-                <div>
-                  <h3 className="text-lg font-medium tracking-wide mb-1 group-hover:text-white text-gray-200 transition-colors">{job.title}</h3>
-                  <p className="text-xs text-gray-500 tracking-wide">
-                    {job.location} • {job.type} • {job.department}
-                  </p>
-                </div>
-                {/* Apply button triggering modal or scrolling to form */}
-                <a href="#apply-form" className="border border-white/20 px-6 py-2 rounded-full text-xs font-medium uppercase tracking-widest hover:bg-white hover:text-black transition-colors w-max">
-                  Apply now
-                </a>
-              </div>
-            ))
-          )}
+        <div className="mb-24">
+          <InteractiveJobsList jobs={jobs} />
         </div>
 
         {/* Didn't find the right role */}

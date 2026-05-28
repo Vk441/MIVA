@@ -53,3 +53,49 @@ export async function deleteJob(id: string) {
     return { success: false, error: error.message };
   }
 }
+
+export async function getApplications() {
+  if (!(await checkAuth())) return { success: false, applications: [], error: "Unauthorized" };
+  try {
+    const applications = await prisma.application.findMany({
+      orderBy: { createdAt: "desc" }
+    });
+    return { success: true, applications };
+  } catch (error: any) {
+    return { success: false, applications: [], error: error.message };
+  }
+}
+
+export async function getContactMessages() {
+  if (!(await checkAuth())) return { success: false, messages: [], error: "Unauthorized" };
+  try {
+    const messages = await prisma.contactMessage.findMany({
+      orderBy: { createdAt: "desc" }
+    });
+    return { success: true, messages };
+  } catch (error: any) {
+    return { success: false, messages: [], error: error.message };
+  }
+}
+
+export async function deleteApplication(id: string) {
+  if (!(await checkAuth())) return { success: false, error: "Unauthorized" };
+  try {
+    await prisma.application.delete({ where: { id } });
+    revalidatePath("/admin");
+    return { success: true };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function deleteContactMessage(id: string) {
+  if (!(await checkAuth())) return { success: false, error: "Unauthorized" };
+  try {
+    await prisma.contactMessage.delete({ where: { id } });
+    revalidatePath("/admin");
+    return { success: true };
+  } catch (error: any) {
+    return { success: false, error: error.message };
+  }
+}
