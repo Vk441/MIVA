@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
       {/* Hero Section */}
-      <section className="pt-24 pb-8 px-4 flex flex-col items-center justify-center">
+      <section className="w-full pt-20">
         <HeroSlideshow />
-        <div className="text-center mt-8 select-none">
-          <p className="text-xs font-semibold tracking-[0.4em] uppercase text-[#0f2042]/60">
+        <div className="text-center mt-14 mb-8 select-none px-4">
+          <p className="text-3xl md:text-5xl font-extrabold tracking-[0.25em] uppercase text-[#0f2042]">
             Empowering the Sky
           </p>
         </div>
@@ -19,12 +19,12 @@ export default function Home() {
       {/* About Section */}
       <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-6">About Us</h3>
-        <div className="max-w-4xl space-y-6">
+        <div className="max-w-5xl space-y-6">
           <p className="text-xl md:text-2xl font-light leading-relaxed text-primary">
-            MIVA Aerospace and Defence Technology is a high-precision aerospace and defence startup focused on the indigenous design, development, manufacturing, and integration of advanced Unmanned Aerial Systems (UAS).
+            MIVA Aerospace and Defence Technology is a pioneering, high-precision aerospace and defence systems startup engineered from the ground up for the indigenous design, engineering, and manufacturing of advanced tactical Unmanned Aerial Systems (UAS).
           </p>
-          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
-            We specialise in building modular, mission-ready platforms — spanning multirotor, fixed-wing, and VTOL configurations — engineered to meet the operational demands of modern defence environments.
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto">
+            We specialise in building modular, mission-ready platforms — spanning multirotor, fixed-wing, and high-end VTOL configurations — fully optimized to withstand and dominate the extreme operational environments of modern national defence sectors.
           </p>
         </div>
         
@@ -212,16 +212,16 @@ export default function Home() {
                 <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
                   <Shield size={20} />
                 </div>
-                <h3 className="text-lg font-bold tracking-wide text-primary">3. 100% Indigenous Innovation</h3>
+                <h3 className="text-lg font-bold tracking-wide text-primary">3. Indigenous Innovation</h3>
                 <p className="text-xs text-muted-foreground font-light leading-relaxed">
-                  By developing all IP, firmware, hardware blueprints, and physical aircraft from scratch, we dramatically enhance Indian aerospace capabilities. 
+                  Technology development from scratch to improve the Indian capability and serviceability.
                 </p>
                 <p className="text-xs text-muted-foreground font-light leading-relaxed">
-                  Our localized supply chain guarantees complete national security audit compliance and absolute domestic serviceability without foreign reliance.
+                  Our domestic engineering focus enhances aerospace designs and ensures reliable local support and compliance.
                 </p>
               </div>
               <div className="pt-4 border-t border-border flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-semibold text-primary">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Self-Reliance Achieved
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Indian Design & Development
               </div>
             </div>
           </div>

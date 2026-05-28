@@ -26,8 +26,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-foreground bg-background">
-      <div className="text-center mb-20 pt-10">
+    <div className="flex flex-col min-h-screen pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-foreground bg-background">
+      <div className="text-center mb-16 pt-4">
         <span className="text-[10px] font-bold uppercase tracking-widest bg-primary/10 text-primary border border-primary/15 px-3.5 py-1.5 rounded-full mb-4 inline-block">
           Get in Touch
         </span>

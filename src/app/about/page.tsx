@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
       {/* Header */}
-      <section className="pt-24 pb-16 px-4 md:px-8 text-center flex flex-col items-center">
+      <section className="pt-20 pb-16 px-4 md:px-8 text-center flex flex-col items-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide mb-4 text-primary">
           Rewriting defense aviation
         </h1>
@@ -69,36 +69,27 @@ export default function AboutPage() {
               {/* 2026 */}
               <div className="relative pl-8 md:pl-12 group">
                 <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background transition-all group-hover:scale-125" />
-                <div className="absolute -left-20 md:-left-28 top-1 text-sm font-bold text-[#0f2042]/60 select-none">2026</div>
-                <div className="bg-muted border border-border p-6 rounded-2xl shadow-sm max-w-2xl">
+                <div className="absolute -left-20 md:-left-28 top-1.5 text-sm font-bold text-[#0f2042]/60 select-none">2026</div>
+                <div className="bg-muted border border-border px-6 py-4 rounded-2xl shadow-sm max-w-2xl">
                   <h4 className="font-bold text-primary text-base">Foundations & Inception</h4>
-                  <p className="text-xs text-muted-foreground font-light leading-relaxed mt-2">
-                    MIVA Aerospace and Defence Technology started as a high-precision aerospace and defense startup. We completed our primary aerodynamic CFD sizing, established hardware simulation layers, and initiated core indigenous component outlines from scratch.
-                  </p>
                 </div>
               </div>
 
               {/* 2027 */}
               <div className="relative pl-8 md:pl-12 group">
                 <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background transition-all group-hover:scale-125" />
-                <div className="absolute -left-20 md:-left-28 top-1 text-sm font-bold text-[#0f2042]/60 select-none">2027</div>
-                <div className="bg-muted border border-border p-6 rounded-2xl shadow-sm max-w-2xl">
+                <div className="absolute -left-20 md:-left-28 top-1.5 text-sm font-bold text-[#0f2042]/60 select-none">2027</div>
+                <div className="bg-muted border border-border px-6 py-4 rounded-2xl shadow-sm max-w-2xl">
                   <h4 className="font-bold text-primary text-base">Multirotor Manufacturing & Testing</h4>
-                  <p className="text-xs text-muted-foreground font-light leading-relaxed mt-2">
-                    **Strategic Engineering Goal:** Finalize the design, localized assembly, and experimental flight validation of MIVA’s high-precision tactical Multirotor platforms. Conduct secure payload interface assessments and localized edge-networking swarm flight checks.
-                  </p>
                 </div>
               </div>
 
               {/* 2028 */}
               <div className="relative pl-8 md:pl-12 group">
                 <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background transition-all group-hover:scale-125" />
-                <div className="absolute -left-20 md:-left-28 top-1 text-sm font-bold text-[#0f2042]/60 select-none">2028</div>
-                <div className="bg-muted border border-border p-6 rounded-2xl shadow-sm max-w-2xl">
+                <div className="absolute -left-20 md:-left-28 top-1.5 text-sm font-bold text-[#0f2042]/60 select-none">2028</div>
+                <div className="bg-muted border border-border px-6 py-4 rounded-2xl shadow-sm max-w-2xl">
                   <h4 className="font-bold text-primary text-base">VTOL Fixed-Wing Launch</h4>
-                  <p className="text-xs text-muted-foreground font-light leading-relaxed mt-2">
-                    **Milestone Target:** Deliver full-scale hybrid-electric vertical takeoff and landing (VTOL) Fixed Wing platforms. Finalize custom hybrid gas turbine testing logs, long-endurance flight tests, and achieve complete system readiness for strategic defense deployment.
-                  </p>
                 </div>
               </div>
             </div>

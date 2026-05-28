@@ -63,7 +63,7 @@ export default function HeroSlideshow() {
 
   return (
     <div 
-      className="relative w-full max-w-7xl mx-auto h-[400px] md:h-[550px] lg:h-[650px] rounded-3xl overflow-hidden shadow-xl bg-gray-900 group"
+      className="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden bg-gray-900 group"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -86,37 +86,8 @@ export default function HeroSlideshow() {
               className="object-cover"
               sizes="100vw"
             />
-            {/* Soft Ambient Overlay for Text Contrast */}
-            <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Large Central Branded Text Overlay (Visible at all times with transition) */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-6 max-w-3xl"
-          >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wider text-white drop-shadow-sm">
-              {slides[currentIndex].title}
-            </h1>
-            <p className="text-sm md:text-lg text-white/80 font-light max-w-2xl mx-auto drop-shadow-sm">
-              {slides[currentIndex].subtitle}
-            </p>
-            <div className="pt-4">
-              <Link 
-                href={slides[currentIndex].link}
-                className="inline-block border border-white hover:bg-white hover:text-black text-white text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-full transition-all duration-300 shadow-md shadow-black/10"
-              >
-                {slides[currentIndex].cta}
-              </Link>
-            </div>
+            {/* Soft Ambient Overlay */}
+            <div className="absolute inset-0 bg-black/10" />
           </motion.div>
         </AnimatePresence>
       </div>
