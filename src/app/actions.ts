@@ -17,12 +17,17 @@ export async function submitContactForm(formData: FormData) {
     }
 
     // Send email via Resend
-    await resend.emails.send({
-      from: "MIVA <noreply@miva-aerospace.com>", // You'll need to verify a domain in Resend
+    const { data, error } = await resend.emails.send({
+      from: "MIVA <noreply@miva-aerospace.com>", // Note: requires miva-aerospace.com to be verified in Resend. For testing, onboarding@resend.dev can be used.
       to: [MIVA_EMAIL],
       subject: `New Contact Request from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
+
+    if (error) {
+      console.error("Resend error sending contact form email:", error);
+      return { success: false, error: error.message || "Email sending failed" };
+    }
 
     return { success: true };
   } catch (error: any) {
@@ -45,12 +50,17 @@ export async function submitCareerApplication(formData: FormData) {
     // Optionally save application to database here (if we add an Application model)
 
     // Send email via Resend
-    await resend.emails.send({
-      from: "MIVA Careers <noreply@miva-aerospace.com>", 
+    const { data, error } = await resend.emails.send({
+      from: "MIVA Careers <noreply@miva-aerospace.com>", // Note: requires miva-aerospace.com to be verified in Resend.
       to: [MIVA_EMAIL],
       subject: `New Job Application from ${name} (Job ID: ${jobId})`,
       text: `Name: ${name}\nEmail: ${email}\nJob ID: ${jobId}\n\nCover Letter:\n${coverLetter}`,
     });
+
+    if (error) {
+      console.error("Resend error sending career application email:", error);
+      return { success: false, error: error.message || "Email sending failed" };
+    }
 
     return { success: true };
   } catch (error: any) {
