@@ -67,9 +67,9 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
 
   if (status === "success") {
     return (
-      <div className="bg-green-500/10 border border-green-500/20 text-green-400 p-6 rounded-xl text-center">
-        <p className="font-medium text-lg">Application Received</p>
-        <p className="font-light mt-2">Thank you! Our recruitment team will review your CV shortly.</p>
+      <div className="bg-green-50 border border-green-200 text-green-700 p-6 rounded-2xl text-center">
+        <p className="font-semibold text-lg">Application Received</p>
+        <p className="font-light mt-2 text-sm">Thank you! Our recruitment team will review your CV shortly.</p>
       </div>
     );
   }
@@ -78,34 +78,36 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
   const preselectedJob = jobs.find(j => j.id === preselectedJobId);
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 text-foreground">
       <div>
-        <label htmlFor="name" className="block text-xs font-semibold tracking-wider text-gray-400 mb-2 uppercase">Full Name</label>
+        <label htmlFor="name" className="block text-xs font-bold tracking-wider text-gray-500 mb-2 uppercase">Full Name</label>
         <input 
           type="text" 
           name="name" 
           id="name" 
           required
-          className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40 transition-colors"
+          placeholder="e.g. Parth Sudani"
+          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-sm shadow-sm"
         />
       </div>
       
       <div>
-        <label htmlFor="email" className="block text-xs font-semibold tracking-wider text-gray-400 mb-2 uppercase">Email Address</label>
+        <label htmlFor="email" className="block text-xs font-bold tracking-wider text-gray-500 mb-2 uppercase">Email Address</label>
         <input 
           type="email" 
           name="email" 
           id="email" 
           required
-          className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40 transition-colors"
+          placeholder="e.g. parth@example.com"
+          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-sm shadow-sm"
         />
       </div>
       
       <div>
-        <label htmlFor="jobId" className="block text-xs font-semibold tracking-wider text-gray-400 mb-2 uppercase">Position</label>
+        <label htmlFor="jobId" className="block text-xs font-bold tracking-wider text-gray-500 mb-2 uppercase">Position</label>
         {preselectedJobId ? (
           <div>
-            <div className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-gray-400 select-none">
+            <div className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-700 font-semibold select-none text-sm shadow-sm">
               {preselectedJob?.title || "General Application"}
             </div>
             <input type="hidden" name="jobId" value={preselectedJobId} />
@@ -115,7 +117,7 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
             name="jobId" 
             id="jobId"
             required
-            className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white/40 transition-colors appearance-none"
+            className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-sm shadow-sm"
           >
             <option value="">Select a position...</option>
             <option value="general">General Application</option>
@@ -127,21 +129,21 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
       </div>
 
       <div>
-        <label htmlFor="coverLetter" className="block text-xs font-semibold tracking-wider text-gray-400 mb-2 uppercase">Cover Letter / Note</label>
+        <label htmlFor="coverLetter" className="block text-xs font-bold tracking-wider text-gray-500 mb-2 uppercase">Cover Letter / Note</label>
         <textarea 
           name="coverLetter" 
           id="coverLetter" 
           rows={4} 
           required
           placeholder="Briefly tell us why you want to build the future of aerospace at MIVA..."
-          className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-white/40 transition-colors resize-none"
+          className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all resize-none text-sm leading-relaxed shadow-sm"
         ></textarea>
       </div>
 
       {/* CV/Resume File Upload */}
       <div>
-        <label className="block text-xs font-semibold tracking-wider text-gray-400 mb-2 uppercase">Resume / CV (PDF, Word)</label>
-        <div className="relative border border-dashed border-white/10 hover:border-white/30 rounded-lg p-6 bg-black/20 text-center transition-colors">
+        <label className="block text-xs font-bold tracking-wider text-gray-500 mb-2 uppercase">Resume / CV (PDF, Word)</label>
+        <div className="relative border border-dashed border-slate-200 hover:border-primary/45 rounded-lg p-6 bg-slate-50 text-center transition-all">
           <input 
             type="file" 
             name="resume" 
@@ -154,23 +156,23 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
           />
           {!selectedFile ? (
             <div className="flex flex-col items-center space-y-2 pointer-events-none">
-              <Upload size={20} className="text-gray-500" />
-              <p className="text-sm font-medium text-gray-300">Click to upload or drag & drop</p>
-              <p className="text-xs text-gray-600">PDF, DOC, DOCX up to 4MB</p>
+              <Upload size={20} className="text-gray-400" />
+              <p className="text-sm font-semibold text-slate-700">Click to upload or drag & drop</p>
+              <p className="text-xs text-gray-500">PDF, DOC, DOCX up to 4MB</p>
             </div>
           ) : (
-            <div className="flex items-center justify-between bg-white/5 border border-white/10 rounded-lg p-3 relative z-10">
+            <div className="flex items-center justify-between bg-white border border-slate-200 rounded-lg p-3 relative z-10">
               <div className="flex items-center space-x-3">
-                <FileText size={20} className="text-white/60" />
+                <FileText size={20} className="text-primary/60" />
                 <div className="text-left">
-                  <p className="text-sm font-medium text-gray-200 max-w-[200px] sm:max-w-[300px] truncate">{selectedFile.name}</p>
+                  <p className="text-sm font-semibold text-slate-700 max-w-[200px] sm:max-w-[300px] truncate">{selectedFile.name}</p>
                   <p className="text-xs text-gray-500">{(selectedFile.size / 1024 / 1024).toFixed(2)} MB</p>
                 </div>
               </div>
               <button 
                 type="button" 
                 onClick={removeFile}
-                className="text-gray-400 hover:text-white p-1 rounded-full hover:bg-white/5 transition-colors"
+                className="text-gray-400 hover:text-red-500 p-1 rounded-full hover:bg-slate-100 transition-colors"
                 title="Remove file"
               >
                 <X size={16} />
@@ -181,13 +183,15 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
       </div>
 
       {status === "error" && (
-        <p className="text-red-400 text-sm font-medium">{errorMessage}</p>
+        <div className="bg-red-50 border border-red-200 text-red-600 p-4 rounded-xl text-xs font-semibold">
+          {errorMessage}
+        </div>
       )}
       
       <button 
         type="submit" 
         disabled={status === "loading"}
-        className="w-full bg-white text-black font-bold uppercase tracking-widest py-4 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50"
+        className="w-full bg-primary hover:bg-primary/95 text-white font-bold uppercase tracking-widest py-4 rounded-lg transition-all disabled:opacity-50 text-xs shadow-md shadow-primary/10"
       >
         {status === "loading" ? "Submitting..." : "Submit Application"}
       </button>

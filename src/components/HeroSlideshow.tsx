@@ -2,17 +2,31 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
-  { src: "/1.png", alt: "MIVA Drone System Alpha" },
-  { src: "/2.png", alt: "MIVA Tactical Flight Operations" }
+  { 
+    src: "/1.png", 
+    alt: "MIVA Autonomous Aerospace Systems",
+    title: "Empowering The Sky",
+    subtitle: "Indigenous High-Precision Aerospace & Defense UAS Systems",
+    cta: "Explore Openings",
+    link: "/careers"
+  },
+  { 
+    src: "/2.png", 
+    alt: "MIVA Mission-Critical Platforms",
+    title: "Indigenously Built",
+    subtitle: "Custom Subsystems Engineered for Absolute Strategic Security",
+    cta: "Partner With Us",
+    link: "/contact"
+  }
 ];
 
 export default function HeroSlideshow() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [hoverSide, setHoverSide] = useState<"left" | "right" | null>(null);
   const touchStart = useRef<number | null>(null);
 
   const prevSlide = () => {
@@ -23,9 +37,9 @@ export default function HeroSlideshow() {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
-  // Auto-play slides every 6 seconds
+  // Auto-play slides every 7 seconds
   useEffect(() => {
-    const timer = setInterval(nextSlide, 6000);
+    const timer = setInterval(nextSlide, 7000);
     return () => clearInterval(timer);
   }, []);
 
@@ -49,12 +63,12 @@ export default function HeroSlideshow() {
 
   return (
     <div 
-      className="relative w-full max-w-7xl mx-auto h-[300px] md:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-xl bg-gray-100"
+      className="relative w-full max-w-7xl mx-auto h-[400px] md:h-[550px] lg:h-[650px] rounded-3xl overflow-hidden shadow-xl bg-gray-900 group"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* Slides Viewport */}
-      <div className="absolute inset-0 z-0 select-none pointer-events-none">
+      <div className="absolute inset-0 z-0 select-none">
         <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={currentIndex}
@@ -72,74 +86,72 @@ export default function HeroSlideshow() {
               className="object-cover"
               sizes="100vw"
             />
-            {/* Soft Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
+            {/* Soft Ambient Overlay for Text Contrast */}
+            <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Edge-Hover Active Zones */}
-      {/* Left Hover Zone */}
-      <div 
-        className="absolute left-0 top-0 w-[15%] h-full z-20 cursor-pointer hidden md:block"
-        onMouseEnter={() => setHoverSide("left")}
-        onMouseLeave={() => setHoverSide(null)}
+      {/* Large Central Branded Text Overlay (Visible at all times with transition) */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-6 max-w-3xl"
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wider text-white drop-shadow-sm">
+              {slides[currentIndex].title}
+            </h1>
+            <p className="text-sm md:text-lg text-white/80 font-light max-w-2xl mx-auto drop-shadow-sm">
+              {slides[currentIndex].subtitle}
+            </p>
+            <div className="pt-4">
+              <Link 
+                href={slides[currentIndex].link}
+                className="inline-block border border-white hover:bg-white hover:text-black text-white text-xs font-semibold uppercase tracking-widest px-8 py-3.5 rounded-full transition-all duration-300 shadow-md shadow-black/10"
+              >
+                {slides[currentIndex].cta}
+              </Link>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Edge Navigation Buttons (Visible by default) */}
+      {/* Left Chevron Button */}
+      <button
+        className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/20 hover:bg-black/40 active:scale-95 text-white/80 hover:text-white border border-white/10 rounded-full shadow-lg transition-all"
         onClick={prevSlide}
-      />
-      {/* Right Hover Zone */}
-      <div 
-        className="absolute right-0 top-0 w-[15%] h-full z-20 cursor-pointer hidden md:block"
-        onMouseEnter={() => setHoverSide("right")}
-        onMouseLeave={() => setHoverSide(null)}
+        aria-label="Previous Slide"
+      >
+        <ChevronLeft size={24} />
+      </button>
+
+      {/* Right Chevron Button */}
+      <button
+        className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/20 hover:bg-black/40 active:scale-95 text-white/80 hover:text-white border border-white/10 rounded-full shadow-lg transition-all"
         onClick={nextSlide}
-      />
+        aria-label="Next Slide"
+      >
+        <ChevronRight size={24} />
+      </button>
 
-      {/* Floating Edge Navigation Buttons */}
-      <AnimatePresence>
-        {hoverSide === "left" && (
-          <motion.button
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -10 }}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/80 hover:bg-white text-primary border border-primary/10 rounded-full shadow-lg transition-colors hidden md:block"
-            onClick={prevSlide}
-          >
-            <ChevronLeft size={24} />
-          </motion.button>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {hoverSide === "right" && (
-          <motion.button
-            initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 10 }}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/80 hover:bg-white text-primary border border-primary/10 rounded-full shadow-lg transition-colors hidden md:block"
-            onClick={nextSlide}
-          >
-            <ChevronRight size={24} />
-          </motion.button>
-        )}
-      </AnimatePresence>
-
-      {/* Widescreen and Mobile Small Indicator Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2.5">
+      {/* Indicator Dots */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2.5">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
             className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-              currentIndex === idx ? "bg-primary w-6" : "bg-primary/20 hover:bg-primary/40"
+              currentIndex === idx ? "bg-white w-6" : "bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
-      </div>
-
-      {/* Floating Small Branding Caption (Mobile Swipeable Indicator) */}
-      <div className="absolute top-6 left-6 z-30 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] tracking-widest uppercase font-semibold py-1.5 px-3 rounded-full md:hidden select-none">
-        ← Swipe to explore →
       </div>
     </div>
   );

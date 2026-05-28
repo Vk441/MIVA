@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import { ArrowUpRight, Shield, MapPin, Briefcase } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
       {/* Hero Section */}
-      <section className="pt-32 pb-8 px-4 flex flex-col items-center justify-center">
+      <section className="pt-24 pb-8 px-4 flex flex-col items-center justify-center">
         <HeroSlideshow />
         <div className="text-center mt-8 select-none">
-          <p className="text-xs font-semibold tracking-[0.4em] uppercase text-muted-foreground">
+          <p className="text-xs font-semibold tracking-[0.4em] uppercase text-[#0f2042]/60">
             Empowering the Sky
           </p>
         </div>
@@ -17,30 +18,49 @@ export default function Home() {
 
       {/* About Section */}
       <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
-        <h3 className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">About Us</h3>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-wide max-w-3xl leading-relaxed text-primary">
-          "Empowering the next generation of aerospace through indigenous development and mission-critical Systems."
-        </h2>
+        <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-6">About Us</h3>
+        <div className="max-w-4xl space-y-6">
+          <p className="text-xl md:text-2xl font-light leading-relaxed text-primary">
+            MIVA Aerospace and Defence Technology is a high-precision aerospace and defence startup focused on the indigenous design, development, manufacturing, and integration of advanced Unmanned Aerial Systems (UAS).
+          </p>
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
+            We specialise in building modular, mission-ready platforms — spanning multirotor, fixed-wing, and VTOL configurations — engineered to meet the operational demands of modern defence environments.
+          </p>
+        </div>
         
-        {/* SEO Anchors / Tab Redirections */}
-        <div className="flex justify-center gap-8 md:gap-16 mt-12 border-b border-border pb-6 w-full max-w-xl">
+        {/* Expanded SEO Card Boxes */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 w-full max-w-4xl text-left">
           <Link 
             href="/about#overview" 
-            className="text-xs font-bold tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors"
+            className="bg-[#0f2042]/5 hover:bg-[#0f2042]/10 border border-[#0f2042]/10 rounded-2xl p-8 flex flex-col justify-between items-start h-[160px] transition-all group shadow-sm hover:shadow"
           >
-            Overview
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#0f2042]/60">Explore Details</span>
+            <div className="flex justify-between items-center w-full">
+              <span className="text-xl font-bold uppercase tracking-wide text-primary">Overview</span>
+              <ArrowUpRight size={18} className="text-[#0f2042]/60 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </div>
           </Link>
+          
           <Link 
             href="/about#team" 
-            className="text-xs font-bold tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors"
+            className="bg-[#0f2042]/5 hover:bg-[#0f2042]/10 border border-[#0f2042]/10 rounded-2xl p-8 flex flex-col justify-between items-start h-[160px] transition-all group shadow-sm hover:shadow"
           >
-            Team
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#0f2042]/60">Meet the Engineers</span>
+            <div className="flex justify-between items-center w-full">
+              <span className="text-xl font-bold uppercase tracking-wide text-primary">Team</span>
+              <ArrowUpRight size={18} className="text-[#0f2042]/60 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </div>
           </Link>
+          
           <Link 
             href="/about#story" 
-            className="text-xs font-bold tracking-wider uppercase text-muted-foreground hover:text-primary transition-colors"
+            className="bg-[#0f2042]/5 hover:bg-[#0f2042]/10 border border-[#0f2042]/10 rounded-2xl p-8 flex flex-col justify-between items-start h-[160px] transition-all group shadow-sm hover:shadow"
           >
-            Our story
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#0f2042]/60">Our Timeline</span>
+            <div className="flex justify-between items-center w-full">
+              <span className="text-xl font-bold uppercase tracking-wide text-primary">Our Story</span>
+              <ArrowUpRight size={18} className="text-[#0f2042]/60 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </div>
           </Link>
         </div>
       </section>
@@ -120,13 +140,146 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Vision & Capabilities Section [Migrated from About Page] */}
+      <section className="py-24 px-4 md:px-12 lg:px-24 w-full flex flex-col items-center">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="text-center mb-16">
+            <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Vision & Capabilities</h3>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-primary">
+              Engineering Indigenous Dominance
+            </h2>
+            <div className="h-[2px] w-12 bg-primary mx-auto my-6 rounded"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* UAV Design & Development */}
+            <div className="bg-muted border border-border p-6 rounded-2xl shadow-sm space-y-4 text-left">
+              <div className="relative w-full h-[150px] overflow-hidden rounded-xl border border-border bg-white">
+                <Image 
+                  src="/aircraft_platform.png"
+                  alt="UAV Design"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-bold tracking-wide text-primary">1. UAV Design & Development</h3>
+              <p className="text-xs text-muted-foreground font-light leading-relaxed">
+                We design and manufacture high-durability autonomous platforms optimized for varying tactical missions. Our standard product catalog includes:
+              </p>
+              <div className="pt-2 space-y-2 text-xs font-semibold text-primary">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Multi-rotor Tactical Platforms
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Hybrid-electric VTOL Fixed Wing
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Long-Endurance Fixed Wing UAVs
+                </div>
+              </div>
+            </div>
+            
+            {/* System & Subsystem Development */}
+            <div className="bg-muted border border-border p-6 rounded-2xl shadow-sm space-y-4 text-left">
+              <div className="relative w-full h-[150px] overflow-hidden rounded-xl border border-border bg-white">
+                <Image 
+                  src="/propulsion_systems.png"
+                  alt="Subsystems"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-bold tracking-wide text-primary">2. System & Subsystem Development</h3>
+              <p className="text-xs text-muted-foreground font-light leading-relaxed">
+                True self-reliance requires controlling the core. We engineer critical subsystems entirely in-house:
+              </p>
+              <div className="pt-2 space-y-2 text-xs font-semibold text-primary">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Custom Micro-Turbine Hybrid Engines
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Advanced Flight Control Computers (FCC)
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Military-Grade Telemetry Link Modules
+                </div>
+              </div>
+            </div>
+            
+            {/* Technology From Scratch */}
+            <div className="bg-muted border border-border p-6 rounded-2xl shadow-sm space-y-4 flex flex-col justify-between text-left">
+              <div className="space-y-4">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                  <Shield size={20} />
+                </div>
+                <h3 className="text-lg font-bold tracking-wide text-primary">3. 100% Indigenous Innovation</h3>
+                <p className="text-xs text-muted-foreground font-light leading-relaxed">
+                  By developing all IP, firmware, hardware blueprints, and physical aircraft from scratch, we dramatically enhance Indian aerospace capabilities. 
+                </p>
+                <p className="text-xs text-muted-foreground font-light leading-relaxed">
+                  Our localized supply chain guarantees complete national security audit compliance and absolute domestic serviceability without foreign reliance.
+                </p>
+              </div>
+              <div className="pt-4 border-t border-border flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-semibold text-primary">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Self-Reliance Achieved
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Action Cards Section [Migrated from About Page] */}
+      <section className="py-16 px-4 md:px-12 lg:px-24 w-full bg-muted border-t border-b border-border">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Collaborate Card */}
+            <div className="bg-[#0f2042] text-white p-8 rounded-3xl flex flex-col justify-between h-[250px] shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden text-left">
+              <div className="space-y-3 z-10">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white/60">Partner with MIVA</span>
+                <h2 className="text-2xl font-bold uppercase tracking-wide">Collaborate</h2>
+                <p className="text-xs font-light text-white/70 max-w-sm">
+                  Explore strategic alliances, research partnerships, or customized deployment requirements with our engineering team.
+                </p>
+              </div>
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-black bg-white px-5 py-3 rounded-full w-max hover:bg-gray-100 transition-colors z-10"
+              >
+                Contact Team <ArrowUpRight size={14} />
+              </Link>
+              {/* Absolute Background Pattern */}
+              <div className="absolute right-[-20px] bottom-[-20px] w-[150px] h-[150px] rounded-full bg-white/[0.03] pointer-events-none" />
+            </div>
+
+            {/* Work With Us Card */}
+            <div className="bg-background border border-border p-8 rounded-3xl flex flex-col justify-between h-[250px] shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden text-left">
+              <div className="space-y-3 z-10">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Join the Mission</span>
+                <h2 className="text-2xl font-bold uppercase tracking-wide text-primary">Work with us</h2>
+                <p className="text-xs font-light text-muted-foreground max-w-sm">
+                  Want to build what's never been built before? Join our fast-growing aircraft propulsion and navigation autonomy teams.
+                </p>
+              </div>
+              <Link 
+                href="/careers"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white bg-primary px-5 py-3 rounded-full w-max hover:bg-primary/95 transition-colors z-10"
+              >
+                Explore Openings <ArrowUpRight size={14} />
+              </Link>
+              {/* Absolute Background Pattern */}
+              <div className="absolute right-[-20px] bottom-[-20px] w-[150px] h-[150px] rounded-full bg-primary/[0.02] pointer-events-none" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Careers Section Preview */}
       <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full text-center">
         <h3 className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">Careers</h3>
         <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-primary mb-12">
           Join MIVA Systems
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
           <div className="flex flex-col items-center text-center">
             <div className="relative w-full h-[250px] rounded-2xl mb-6 overflow-hidden border border-border shadow-sm">
               <Image

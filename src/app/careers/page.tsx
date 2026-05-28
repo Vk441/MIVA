@@ -18,23 +18,23 @@ export default async function CareersPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
       {/* Hero */}
-      <section className="relative h-[450px] md:h-[550px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/about_vision.png"
             alt="MIVA Engineers"
             fill
             priority
-            className="object-cover opacity-15 grayscale"
+            className="object-cover opacity-10 grayscale"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-4">
           <span className="text-[10px] font-bold uppercase tracking-widest bg-primary/10 text-primary border border-primary/15 px-3.5 py-1.5 rounded-full">
-            Join MIVA
+            Join the Mission
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-primary pt-2">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-primary pt-2">
             Invent the future of flight
           </h1>
           <p className="text-sm md:text-base text-muted-foreground font-light max-w-2xl mx-auto">
@@ -44,69 +44,68 @@ export default async function CareersPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
-        {/* Intro */}
-        <div className="max-w-3xl text-muted-foreground font-light leading-relaxed space-y-6 mb-24 text-base md:text-lg">
-          <p>
-            MIVA is building a new category of autonomous aircraft that will transform defense aviation. To do that, we need creative individuals ready to solve complex physical problems from first principles.
-          </p>
-          <p>
-            If you thrive at the intersection of imagination, hard hardware engineering, and rapid iteration, you'll feel right at home with us.
-          </p>
-        </div>
-
-        {/* Our Teams */}
-        <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-primary mb-8 border-b border-border pb-4">
-          Engineering Teams
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
-          <div>
-            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-border shadow-sm">
+      <section className="py-8 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
+        {/* Intro Grid - Showing ONLY ONE prominent widescreen blueprint image */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+          <div className="lg:col-span-6 space-y-6 text-muted-foreground font-light leading-relaxed text-base md:text-lg">
+            <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-primary">
+              Engineering autonomous defense systems
+            </h2>
+            <p>
+              MIVA is building a new category of autonomous aircraft that will transform defense aviation. To do that, we need creative individuals ready to solve complex physical problems from first principles.
+            </p>
+            <p>
+              If you thrive at the intersection of imagination, hard hardware engineering, and rapid iteration, you'll feel right at home with us.
+            </p>
+          </div>
+          <div className="lg:col-span-6">
+            <div className="relative h-[300px] md:h-[400px] w-full rounded-3xl overflow-hidden border border-border shadow-md bg-muted">
               <Image
                 src="/aircraft_platform.png"
-                alt="Aircraft Platform Engineering"
+                alt="Aircraft Engineering Systems Model"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <h3 className="text-lg font-bold text-primary mb-2">Aircraft Platform</h3>
+          </div>
+        </div>
+
+        {/* Dynamic Division Descriptions (Text only - premium layout) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 border-t border-border pt-16">
+          <div className="space-y-4">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#0f2042]/60">Division 01</span>
+            <h3 className="text-xl font-bold text-primary">Aircraft Platform Engineering</h3>
             <p className="text-muted-foreground font-light leading-relaxed text-sm">
-              This team is building hybrid-electric vertical takeoff platforms - covering structural CAD, fluid dynamics, stress analysis, payload mechanics, and full-scale hardware testing.
+              Our structures and aerodynamics team designs modular, high-durability platforms. Members focus on CAD modeling, advanced CFD, composite prototyping, load testing, and flight telemetry integrations.
             </p>
           </div>
           
-          <div>
-            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-border shadow-sm">
-              <Image
-                src="/propulsion_systems.png"
-                alt="Propulsion Systems Engineering"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            <h3 className="text-lg font-bold text-primary mb-2">Propulsion Systems</h3>
+          <div className="space-y-4">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#0f2042]/60">Division 02</span>
+            <h3 className="text-xl font-bold text-primary">Propulsion & Systems Engineering</h3>
             <p className="text-muted-foreground font-light leading-relaxed text-sm">
-              This team is responsible for developing compact turbofan engines and high-density battery arrays, focusing on extreme durability and low acoustic signatures.
+              Our powerplant team leads in developing custom hybrid micro-turbines, high-density power delivery controllers, intelligent battery management systems, and specialized vectoring algorithms.
             </p>
           </div>
         </div>
 
         {/* Open Roles */}
-        <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-primary mb-2">
-          Open roles ({jobs.length})
-        </h2>
-        <p className="text-muted-foreground font-light text-sm mb-12">
-          Select an opening below to view the job requirements and submit your application instantly.
-        </p>
-        
-        <div className="mb-24">
-          <InteractiveJobsList jobs={jobs} />
+        <div className="border-t border-border pt-16 mb-16">
+          <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-primary mb-2">
+            Open roles ({jobs.length})
+          </h2>
+          <p className="text-muted-foreground font-light text-sm mb-12">
+            Select an opening below to view the job requirements and submit your application instantly.
+          </p>
+          
+          <div className="mb-24">
+            <InteractiveJobsList jobs={jobs} />
+          </div>
         </div>
 
         {/* Didn't find the right role */}
-        <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-muted border border-border p-8 rounded-3xl">
+        <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-muted border border-border p-8 rounded-3xl shadow-sm">
           <div className="lg:col-span-8 space-y-3">
             <h3 className="text-2xl font-bold text-primary tracking-wide">Didn't find the right role?</h3>
             <p className="text-muted-foreground font-light leading-relaxed text-sm">
@@ -116,7 +115,7 @@ export default async function CareersPage() {
           <div className="lg:col-span-4 lg:text-right">
             <a 
               href="mailto:hiring@miva.com" 
-              className="inline-block text-xs font-bold uppercase tracking-widest text-white bg-primary px-6 py-4 rounded-xl hover:bg-primary/95 transition-all shadow-sm"
+              className="inline-block text-xs font-bold uppercase tracking-widest text-white bg-primary px-6 py-4 rounded-xl hover:bg-primary/95 transition-all shadow-sm shadow-primary/10"
             >
               Transmission to Hiring
             </a>
