@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --primary: #ffffff;
-  --primary-foreground: #000000;
-  --muted: #1a1a1a;
-  --muted-foreground: #a3a3a3;
-  --border: #333333;
+  --background: #fafafc;
+  --foreground: #0f172a;
+  --primary: #0f2042; /* Premium brand navy blue derived from the defense logo */
+  --primary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: rgba(15, 23, 42, 0.08);
 }
 
 @theme inline {
@@ -31,6 +31,6 @@ body {
 }
 
 ::selection {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: rgba(15, 32, 66, 0.15);
+  color: #0f2042;
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Careers | MIVA",
+  title: "Careers | MIVA Systems",
   description: "Join MIVA and build the future of aerospace and defense.",
 };
 
@@ -16,48 +16,52 @@ export default async function CareersPage() {
   const jobs = result.success ? result.jobs : [];
 
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-[#0d0d0f] text-[#ededed]">
+    <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
       {/* Hero */}
-      <section className="relative h-[600px] flex items-center justify-center">
+      <section className="relative h-[450px] md:h-[550px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/about_vision.png"
             alt="MIVA Engineers"
             fill
             priority
-            className="object-cover opacity-50"
+            className="object-cover opacity-15 grayscale"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0f] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide mb-4">
-            Invent your future,<br />here at MIVA
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-4">
+          <span className="text-[10px] font-bold uppercase tracking-widest bg-primary/10 text-primary border border-primary/15 px-3.5 py-1.5 rounded-full">
+            Join MIVA
+          </span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide text-primary pt-2">
+            Invent the future of flight
           </h1>
+          <p className="text-sm md:text-base text-muted-foreground font-light max-w-2xl mx-auto">
+            We are building technologies that redefine flight. Join us in engineering self-reliant systems designed for uncompromised security.
+          </p>
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
-        <h2 className="text-2xl md:text-3xl font-medium tracking-wide mb-8">
-          Engineering the future of flight
-        </h2>
-        <div className="max-w-4xl text-gray-400 font-light leading-relaxed space-y-6 mb-24">
+      {/* Main Content */}
+      <section className="py-16 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full">
+        {/* Intro */}
+        <div className="max-w-3xl text-muted-foreground font-light leading-relaxed space-y-6 mb-24 text-base md:text-lg">
           <p>
-            MIVA is building a new category of aircraft that will change how the world defends itself. To do that, we need the best people in the world to help us create what's never been built before.
+            MIVA is building a new category of autonomous aircraft that will transform defense aviation. To do that, we need creative individuals ready to solve complex physical problems from first principles.
           </p>
           <p>
-            One of the most underrated but essential traits for invention is imagination - the ability to dream up something new and make it real. The world often lacks imagination, but at MIVA, it's the fuel we run on.
+            If you thrive at the intersection of imagination, hard hardware engineering, and rapid iteration, you'll feel right at home with us.
           </p>
         </div>
 
         {/* Our Teams */}
-        <h2 className="text-2xl md:text-3xl font-medium tracking-wide mb-8">
-          Our teams
+        <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-primary mb-8 border-b border-border pb-4">
+          Engineering Teams
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
           <div>
-            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-white/5 shadow-lg shadow-black/50">
+            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-border shadow-sm">
               <Image
                 src="/aircraft_platform.png"
                 alt="Aircraft Platform Engineering"
@@ -66,13 +70,14 @@ export default async function CareersPage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <p className="text-gray-400 font-light leading-relaxed text-sm">
-              <strong className="text-white font-medium">Aircraft:</strong> This team is building 8-seater hybrid-electric aircraft - from aerodynamic optimization and structural design, to propulsion integration, systems engineering, and full-scale testing. And as we continue developing the aircraft, the natural next step is autonomy - building the perception, navigation, and intelligence that will eventually fly it.
+            <h3 className="text-lg font-bold text-primary mb-2">Aircraft Platform</h3>
+            <p className="text-muted-foreground font-light leading-relaxed text-sm">
+              This team is building hybrid-electric vertical takeoff platforms - covering structural CAD, fluid dynamics, stress analysis, payload mechanics, and full-scale hardware testing.
             </p>
           </div>
           
           <div>
-            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-white/5 shadow-lg shadow-black/50">
+            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-border shadow-sm">
               <Image
                 src="/propulsion_systems.png"
                 alt="Propulsion Systems Engineering"
@@ -81,18 +86,19 @@ export default async function CareersPage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <p className="text-gray-400 font-light leading-relaxed text-sm">
-              <strong className="text-white font-medium">Propulsion:</strong> This team is building world-class defense propulsion engines - from compressor and turbine design, combustion systems, rotor dynamics to controls and test infrastructure.
+            <h3 className="text-lg font-bold text-primary mb-2">Propulsion Systems</h3>
+            <p className="text-muted-foreground font-light leading-relaxed text-sm">
+              This team is responsible for developing compact turbofan engines and high-density battery arrays, focusing on extreme durability and low acoustic signatures.
             </p>
           </div>
         </div>
 
         {/* Open Roles */}
-        <h2 className="text-2xl md:text-3xl font-medium tracking-wide mb-4">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-primary mb-2">
           Open roles ({jobs.length})
         </h2>
-        <p className="text-gray-400 font-light text-sm mb-12">
-          Explore our openings and select a position to see full details and apply.
+        <p className="text-muted-foreground font-light text-sm mb-12">
+          Select an opening below to view the job requirements and submit your application instantly.
         </p>
         
         <div className="mb-24">
@@ -100,20 +106,31 @@ export default async function CareersPage() {
         </div>
 
         {/* Didn't find the right role */}
-        <div className="mb-24">
-          <h2 className="text-2xl font-medium tracking-wide mb-4">
-            Didn't find the right role?
-          </h2>
-          <p className="text-gray-400 font-light leading-relaxed">
-            Still send us your profile at <a href="mailto:hiring@miva.com" className="text-blue-400 hover:underline">hiring@miva.com</a> if you've ever built something cool and want to be part of a team that could one day, rewrite history. We will take it from there!
-          </p>
+        <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-muted border border-border p-8 rounded-3xl">
+          <div className="lg:col-span-8 space-y-3">
+            <h3 className="text-2xl font-bold text-primary tracking-wide">Didn't find the right role?</h3>
+            <p className="text-muted-foreground font-light leading-relaxed text-sm">
+              We are always looking for passionate builders. Send your profile and a brief description of the coolest project you've ever engineered, and we'll take it from there.
+            </p>
+          </div>
+          <div className="lg:col-span-4 lg:text-right">
+            <a 
+              href="mailto:hiring@miva.com" 
+              className="inline-block text-xs font-bold uppercase tracking-widest text-white bg-primary px-6 py-4 rounded-xl hover:bg-primary/95 transition-all shadow-sm"
+            >
+              Transmission to Hiring
+            </a>
+          </div>
         </div>
 
-        {/* Application Form */}
-        <div id="apply-form" className="bg-[#131316] border border-white/5 p-8 md:p-12 rounded-2xl max-w-2xl">
-          <h2 className="text-xl font-medium tracking-wide mb-8">
-            Submit Application
+        {/* Standalone General Application Form */}
+        <div id="apply-form" className="bg-muted border border-border p-8 md:p-12 rounded-3xl max-w-2xl shadow-sm scroll-mt-24">
+          <h2 className="text-xl font-bold uppercase tracking-wide text-primary mb-3">
+            Submit Profile
           </h2>
+          <p className="text-xs text-muted-foreground font-light mb-8">
+            Complete the form below to submit a general profile to our human resources database.
+          </p>
           <CareerApplicationForm jobs={jobs} />
         </div>
       </section>

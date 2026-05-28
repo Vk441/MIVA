@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -21,9 +22,19 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold tracking-tighter uppercase">
-              MIVA
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-border/40 shadow-sm">
+                <Image 
+                  src="/logo.jfif"
+                  alt="MIVA Logo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <span className="text-xl font-bold tracking-wider uppercase text-primary">
+                MIVA
+              </span>
             </Link>
           </div>
           
