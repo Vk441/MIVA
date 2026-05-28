@@ -71,25 +71,6 @@ export default async function CareersPage() {
           </div>
         </div>
 
-        {/* Dynamic Division Descriptions (Text only - premium layout) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 border-t border-border pt-16">
-          <div className="space-y-4">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#0f2042]/60">Division 01</span>
-            <h3 className="text-xl font-bold text-primary">Aircraft Platform Engineering</h3>
-            <p className="text-muted-foreground font-light leading-relaxed text-sm">
-              Our structures and aerodynamics team designs modular, high-durability platforms. Members focus on CAD modeling, advanced CFD, composite prototyping, load testing, and flight telemetry integrations.
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#0f2042]/60">Division 02</span>
-            <h3 className="text-xl font-bold text-primary">Propulsion & Systems Engineering</h3>
-            <p className="text-muted-foreground font-light leading-relaxed text-sm">
-              Our powerplant team leads in developing custom hybrid micro-turbines, high-density power delivery controllers, intelligent battery management systems, and specialized vectoring algorithms.
-            </p>
-          </div>
-        </div>
-
         {/* Open Roles */}
         <div className="border-t border-border pt-16 mb-16">
           <h2 className="text-2xl md:text-3xl font-medium tracking-wide text-primary mb-2">
