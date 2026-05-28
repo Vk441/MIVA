@@ -32,9 +32,7 @@ export async function submitContactForm(formData: FormData) {
 
     if (error) {
       console.error("Resend error sending contact form email:", error);
-      // We return success: true because it successfully saved in the database!
-      // But we mention that the email alert was not sent.
-      return { success: true, emailError: true, error: "Saved to database, but notification email failed to send: " + error.message };
+      return { success: false, error: "Saved to database, but email failed: " + error.message };
     }
 
     return { success: true };
@@ -109,7 +107,7 @@ export async function submitCareerApplication(formData: FormData) {
 
     if (error) {
       console.error("Resend error sending career application email:", error);
-      return { success: true, emailError: true, error: "Saved to database, but notification email failed to send: " + error.message };
+      return { success: false, error: "Saved to database, but email failed: " + error.message };
     }
 
     return { success: true };
