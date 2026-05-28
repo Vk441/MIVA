@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-3">
               <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-border/40 shadow-sm">
                 <Image 
-                  src="/logo.jfif"
+                  src="/logo_image.png"
                   alt="MIVA Logo"
                   fill
                   className="object-cover"
