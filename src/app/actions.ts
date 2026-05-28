@@ -5,6 +5,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY || "re_placeholder_key_for_build");
 const MIVA_EMAIL = process.env.MIVA_EMAIL || "contact@miva.com";
+const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev";
 
 export async function submitContactForm(formData: FormData) {
   try {
@@ -23,7 +24,7 @@ export async function submitContactForm(formData: FormData) {
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "MIVA <noreply@miva-aerospace.com>", // Note: requires miva-aerospace.com to be verified in Resend. For testing, onboarding@resend.dev can be used.
+      from: `MIVA <${FROM_EMAIL}>`, 
       to: [MIVA_EMAIL],
       subject: `New Contact Request from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
@@ -99,7 +100,7 @@ export async function submitCareerApplication(formData: FormData) {
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "MIVA Careers <noreply@miva-aerospace.com>", // Note: requires miva-aerospace.com to be verified in Resend.
+      from: `MIVA Careers <${FROM_EMAIL}>`, 
       to: [MIVA_EMAIL],
       subject: `New Job Application: ${name} - ${jobTitle}`,
       text: `Name: ${name}\nEmail: ${email}\nPosition: ${jobTitle}\n\nCover Letter:\n${coverLetter}\n\nAttached: ${resumeName || "No CV uploaded"}`,

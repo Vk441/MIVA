@@ -57,8 +57,14 @@ export default async function CareersPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
           <div>
-            <div className="bg-[#1a1a1c] border border-white/5 h-[250px] rounded-2xl mb-6 relative overflow-hidden flex items-center justify-center">
-               <span className="text-gray-600 font-light tracking-widest uppercase">Aircraft Platform</span>
+            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-white/5 shadow-lg shadow-black/50">
+              <Image
+                src="/aircraft_platform.png"
+                alt="Aircraft Platform Engineering"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <p className="text-gray-400 font-light leading-relaxed text-sm">
               <strong className="text-white font-medium">Aircraft:</strong> This team is building 8-seater hybrid-electric aircraft - from aerodynamic optimization and structural design, to propulsion integration, systems engineering, and full-scale testing. And as we continue developing the aircraft, the natural next step is autonomy - building the perception, navigation, and intelligence that will eventually fly it.
@@ -66,8 +72,14 @@ export default async function CareersPage() {
           </div>
           
           <div>
-            <div className="bg-[#1a1a1c] border border-white/5 h-[250px] rounded-2xl mb-6 relative overflow-hidden flex items-center justify-center">
-               <span className="text-gray-600 font-light tracking-widest uppercase">Propulsion Systems</span>
+            <div className="relative h-[250px] rounded-2xl mb-6 overflow-hidden border border-white/5 shadow-lg shadow-black/50">
+              <Image
+                src="/propulsion_systems.png"
+                alt="Propulsion Systems Engineering"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <p className="text-gray-400 font-light leading-relaxed text-sm">
               <strong className="text-white font-medium">Propulsion:</strong> This team is building world-class defense propulsion engines - from compressor and turbine design, combustion systems, rotor dynamics to controls and test infrastructure.

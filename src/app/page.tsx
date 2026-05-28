@@ -88,8 +88,14 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 text-left">
           <div className="flex flex-col items-center text-center">
-            <div className="bg-[#1a1a1c] border border-white/5 w-full h-[250px] rounded-2xl mb-6 relative overflow-hidden flex items-center justify-center">
-               <span className="text-gray-600 font-light tracking-widest uppercase">Aerospace Engineering</span>
+            <div className="relative w-full h-[250px] rounded-2xl mb-6 overflow-hidden border border-white/5 shadow-lg shadow-black/50">
+              <Image
+                src="/aircraft_platform.png"
+                alt="Aerospace Engineering"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <p className="text-gray-400 font-light leading-relaxed text-base mb-6 max-w-sm mx-auto">
               Our aircraft team is leading the development of our autonomous platforms, spanning design, prototyping, systems integration, and testing.
@@ -102,8 +108,14 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="bg-[#1a1a1c] border border-white/5 w-full h-[250px] rounded-2xl mb-6 relative overflow-hidden flex items-center justify-center">
-               <span className="text-gray-600 font-light tracking-widest uppercase">Autonomous Systems</span>
+            <div className="relative w-full h-[250px] rounded-2xl mb-6 overflow-hidden border border-white/5 shadow-lg shadow-black/50">
+              <Image
+                src="/propulsion_systems.png"
+                alt="Autonomous Systems"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <p className="text-gray-400 font-light leading-relaxed text-base mb-6 max-w-sm mx-auto">
               Our AI team is focused on building world-class neural networks for navigation, threat detection, and swarm intelligence.
