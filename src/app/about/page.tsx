@@ -9,49 +9,31 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
-      {/* Header */}
-      <section className="pt-20 pb-16 px-4 md:px-8 text-center flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide mb-4 text-primary">
-          Rewriting defense aviation
-        </h1>
-        <p className="text-muted-foreground font-semibold tracking-widest text-xs md:text-sm uppercase mb-16 max-w-2xl leading-loose">
-          Indigenous Development • Mission-Critical Systems • Complete Autonomy
-        </p>
-        <div className="w-full max-w-7xl relative h-[300px] md:h-[500px] lg:h-[600px] overflow-hidden shadow-md rounded-3xl">
-          <Image
-            src="/hero_drone_bg.png"
-            alt="MIVA Advanced Aerospace Drone"
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
-      </section>
-      
       {/* The MIVA Approach */}
-      <section id="overview" className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full scroll-mt-24">
+      <section id="overview" className="pt-24 pb-8 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full scroll-mt-20">
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Overview</h3>
-        <h2 className="text-3xl font-medium tracking-wide mb-8 text-primary">
+        <h2 className="text-3xl font-medium tracking-wide mb-6 text-primary">
           The MIVA approach
         </h2>
         <div className="max-w-4xl">
           <p className="text-muted-foreground font-light leading-relaxed mb-6 text-base md:text-lg">
             We are building a new class of defense aircraft — engineered from first principles for extreme efficiency, stealth, and high-frequency deployment. To achieve true self-reliance, we develop all core technologies in-house, focusing on three foundational vectors:
           </p>
-          <ul className="list-disc pl-5 text-muted-foreground font-light space-y-2 mb-16 text-sm md:text-base">
+          <ul className="list-disc pl-5 text-muted-foreground font-light space-y-2 mb-8 text-sm md:text-base">
             <li>Aerodynamics optimized dynamically for custom payload efficiency and minimized acoustics.</li>
             <li>Hybrid electric propulsion units paired with next-generation smart battery controllers.</li>
             <li>Fully custom navigation autonomy algorithms engineered from scratch for contested airspaces.</li>
           </ul>
         </div>
         
-        <div className="w-full relative h-[250px] md:h-[400px] overflow-hidden rounded-2xl mb-24 border border-border">
+        {/* Main Hero Drone Image placed right after Overview section, compact and premium */}
+        <div className="w-full relative h-[300px] md:h-[500px] lg:h-[580px] overflow-hidden rounded-3xl mt-6 mb-16 border border-border shadow-sm">
           <Image
-            src="/drone_fleet.png"
-            alt="MIVA Fleet"
+            src="/hero_drone_bg.png"
+            alt="MIVA Advanced Aerospace Drone"
             fill
-            className="object-cover"
+            priority
+            className="object-cover object-top"
             sizes="100vw"
           />
         </div>

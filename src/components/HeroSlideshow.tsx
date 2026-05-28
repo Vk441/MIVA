@@ -83,7 +83,7 @@ export default function HeroSlideshow() {
               alt={slides[currentIndex].alt}
               fill
               priority
-              className="object-cover"
+              className="object-cover object-top"
               sizes="100vw"
             />
             {/* Soft Ambient Overlay */}
