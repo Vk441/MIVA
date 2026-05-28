@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   { 
-    src: "/1.png", 
+    src: "/soon.png", 
     alt: "MIVA Autonomous Aerospace Systems",
     title: "Empowering The Sky",
     subtitle: "Indigenous High-Precision Aerospace & Defense UAS Systems",
