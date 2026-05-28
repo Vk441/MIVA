@@ -209,8 +209,13 @@ export default function Home() {
             {/* Technology From Scratch */}
             <div className="bg-muted border border-border p-6 rounded-2xl shadow-sm space-y-4 flex flex-col justify-between text-left">
               <div className="space-y-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
-                  <Shield size={20} />
+                <div className="relative w-full h-[150px] overflow-hidden rounded-xl border border-border bg-white">
+                  <Image 
+                    src="/about_vision.png"
+                    alt="Indigenous Innovation"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <h3 className="text-lg font-bold tracking-wide text-primary">3. Indigenous Innovation</h3>
                 <p className="text-xs text-muted-foreground font-light leading-relaxed">
@@ -274,52 +279,30 @@ export default function Home() {
       </section>
 
       {/* Careers Section Preview */}
-      <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full text-center">
+      <section className="py-24 px-4 md:px-12 lg:px-24 max-w-5xl mx-auto w-full text-center">
         <h3 className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">Careers</h3>
         <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-primary mb-12">
           Join MIVA Systems
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
-          <div className="flex flex-col items-center text-center">
-            <div className="relative w-full h-[250px] rounded-2xl mb-6 overflow-hidden border border-border shadow-sm">
-              <Image
-                src="/aircraft_platform.png"
-                alt="Aerospace Engineering"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            <p className="text-muted-foreground font-light leading-relaxed text-sm mb-6 max-w-sm mx-auto">
-              Our aircraft team is leading the development of our autonomous platforms, spanning design, prototyping, systems integration, and testing.
-            </p>
-            <Link 
-              href="/careers" 
-              className="border border-primary/20 text-primary px-8 py-3 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block"
-            >
-              Explore Roles
-            </Link>
+        <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
+          <div className="relative w-full h-[300px] md:h-[380px] rounded-3xl mb-8 overflow-hidden border border-border shadow-sm">
+            <Image
+              src="/aircraft_platform.png"
+              alt="Aerospace Engineering"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 80vw"
+            />
           </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="relative w-full h-[250px] rounded-2xl mb-6 overflow-hidden border border-border shadow-sm">
-              <Image
-                src="/propulsion_systems.png"
-                alt="Autonomous Systems"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            <p className="text-muted-foreground font-light leading-relaxed text-sm mb-6 max-w-sm mx-auto">
-              Our AI team is focused on building world-class neural networks for navigation, threat detection, and swarm intelligence.
-            </p>
-            <Link 
-              href="/careers" 
-              className="border border-primary/20 text-primary px-8 py-3 rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-primary hover:text-white transition-all inline-block"
-            >
-              Explore AI
-            </Link>
-          </div>
+          <p className="text-muted-foreground font-light leading-relaxed text-base mb-8 max-w-xl mx-auto">
+            Our aircraft and autonomous systems teams lead the design, prototyping, vectoring engines, and physical flight integration of next-generation defense platforms.
+          </p>
+          <Link 
+            href="/careers" 
+            className="border border-[#0f2042] text-[#0f2042] px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#0f2042] hover:text-white transition-all inline-block shadow-sm"
+          >
+            Explore Roles
+          </Link>
         </div>
       </section>
     </div>
