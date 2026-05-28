@@ -27,14 +27,14 @@ export default function AboutPage() {
         </div>
         
         {/* Main Hero Drone Image placed right after Overview section, compact and premium */}
-        <div className="w-full relative h-[300px] md:h-[500px] lg:h-[580px] overflow-hidden rounded-3xl mt-6 mb-16 border border-border shadow-sm">
+        <div className="max-w-4xl mx-auto w-full relative h-[250px] md:h-[380px] lg:h-[450px] overflow-hidden rounded-2xl mt-6 mb-16 bg-[#fafafc] border border-border/85 shadow-sm flex items-center justify-center">
           <Image
             src="/hero_drone_bg.png"
             alt="MIVA Advanced Aerospace Drone"
             fill
             priority
-            className="object-cover object-top"
-            sizes="100vw"
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 80vw"
           />
         </div>
 

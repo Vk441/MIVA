@@ -63,7 +63,7 @@ export default function HeroSlideshow() {
 
   return (
     <div 
-      className="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden bg-gray-900 group"
+      className="relative w-full h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden bg-black select-none group"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -75,7 +75,7 @@ export default function HeroSlideshow() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 0.15, ease: "linear" }}
             className="absolute inset-0"
           >
             <Image
@@ -83,11 +83,11 @@ export default function HeroSlideshow() {
               alt={slides[currentIndex].alt}
               fill
               priority
-              className="object-cover object-top"
+              className="object-contain"
               sizes="100vw"
             />
             {/* Soft Ambient Overlay */}
-            <div className="absolute inset-0 bg-black/10" />
+            <div className="absolute inset-0 bg-black/5" />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -95,29 +95,29 @@ export default function HeroSlideshow() {
       {/* Edge Navigation Buttons (Visible by default) */}
       {/* Left Chevron Button */}
       <button
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/20 hover:bg-black/40 active:scale-95 text-white/80 hover:text-white border border-white/10 rounded-full shadow-lg transition-all"
+        className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/20 hover:bg-black/40 active:scale-95 text-white/80 hover:text-white border border-white/10 rounded-full shadow-lg transition-all outline-none focus:outline-none focus:ring-0 active:outline-none select-none"
         onClick={prevSlide}
         aria-label="Previous Slide"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={24} className="outline-none select-none" />
       </button>
 
       {/* Right Chevron Button */}
       <button
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/20 hover:bg-black/40 active:scale-95 text-white/80 hover:text-white border border-white/10 rounded-full shadow-lg transition-all"
+        className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-black/20 hover:bg-black/40 active:scale-95 text-white/80 hover:text-white border border-white/10 rounded-full shadow-lg transition-all outline-none focus:outline-none focus:ring-0 active:outline-none select-none"
         onClick={nextSlide}
         aria-label="Next Slide"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={24} className="outline-none select-none" />
       </button>
 
       {/* Indicator Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2.5">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2.5 select-none">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 outline-none focus:outline-none select-none ${
               currentIndex === idx ? "bg-white w-6" : "bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
