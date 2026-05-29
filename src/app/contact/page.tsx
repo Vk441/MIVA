@@ -42,17 +42,32 @@ export default function ContactPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* Contact Info (Left 5 cols) */}
-        <div className="lg:col-span-5 space-y-10">
+        <div className="lg:col-span-5 space-y-8">
+          {/* R&D Office */}
           <div className="flex items-start gap-6 bg-muted border border-border p-6 rounded-2xl shadow-sm">
             <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0 shadow-sm shadow-primary/20">
               <MapPin size={22} />
             </div>
             <div>
-              <h3 className="text-base font-bold uppercase tracking-wider text-primary mb-1">Global Headquarters</h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                MIVA Aerospace Complex<br />
-                Innovation Sector, Block 7<br />
-                Defense Tech Park, India
+              <h3 className="text-sm font-black uppercase tracking-wider text-[#0f2042] mb-1">R&D Office</h3>
+              <p className="text-xs text-muted-foreground font-light leading-relaxed">
+                1504, 1505, 15 Floor, The Junomoneta Tower,<br />
+                Near Rajhans Cinema, Opposite Pal RTO, Adajan,<br />
+                Surat, Gujarat, 395009, India
+              </p>
+            </div>
+          </div>
+
+          {/* Regd. Office */}
+          <div className="flex items-start gap-6 bg-muted border border-border p-6 rounded-2xl shadow-sm">
+            <div className="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0 shadow-sm shadow-primary/20">
+              <MapPin size={22} />
+            </div>
+            <div>
+              <h3 className="text-sm font-black uppercase tracking-wider text-[#0f2042] mb-1">Regd. Office</h3>
+              <p className="text-xs text-muted-foreground font-light leading-relaxed">
+                FLAT-202, LOTUS-24, Dabholi Road,<br />
+                Katargam, Surat, Gujarat, 395004, India
               </p>
             </div>
           </div>
