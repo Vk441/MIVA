@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section id="overview" className="pt-36 pb-8 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full scroll-mt-20">
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Overview</h3>
         <h2 className="text-3xl font-medium tracking-wide mb-6 text-primary">
-          The MIVΛ approach
+          The MIVA approach
         </h2>
         <div className="max-w-4xl">
           <p className="text-muted-foreground font-light leading-relaxed mb-6 text-base md:text-lg">
@@ -29,7 +29,7 @@ export default function AboutPage() {
         {/* Main Hero Drone Image placed right after Overview section, compact and premium */}
         <div className="max-w-4xl mx-auto w-full relative h-[250px] md:h-[380px] lg:h-[450px] overflow-hidden rounded-2xl mt-6 mb-16 bg-[#fafafc] border border-border/85 shadow-sm flex items-center justify-center">
           <Image
-            src="/hero_drone_bg.png"
+            src="/vision_img.png"
             alt="MIVΛ Advanced Aerospace Drone"
             fill
             priority
