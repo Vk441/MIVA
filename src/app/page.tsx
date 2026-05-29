@@ -277,34 +277,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Careers Section Preview */}
-      <section className="py-24 px-4 md:px-12 lg:px-24 max-w-5xl mx-auto w-full text-center">
-        <h3 className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">Careers</h3>
-        <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-primary mb-12">
-          Join MIVA Systems
-        </h2>
-        <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
-          <div className="relative w-full h-[300px] md:h-[380px] rounded-3xl mb-8 overflow-hidden border border-border shadow-sm bg-white">
-            <Image
-              src="/UAV Design and Development.png"
-              alt="Aerospace Engineering"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 80vw"
-            />
-          </div>
-          <p className="text-muted-foreground font-light leading-relaxed text-base mb-8 max-w-xl mx-auto">
-            Our aircraft and autonomous systems teams lead the design, prototyping, vectoring engines, and physical flight integration of next-generation defense platforms.
-          </p>
-          <Link 
-            href="/careers" 
-            className="border border-[#0f2042] text-[#0f2042] px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#0f2042] hover:text-white transition-all inline-block shadow-sm"
-          >
-            Explore Roles
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

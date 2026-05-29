@@ -86,7 +86,7 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
           name="name" 
           id="name" 
           required
-          placeholder="e.g. Parth Sudani"
+          placeholder="Enter your name"
           className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-sm shadow-sm"
         />
       </div>
@@ -98,7 +98,7 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
           name="email" 
           id="email" 
           required
-          placeholder="e.g. parth@example.com"
+          placeholder="Enter your email address"
           className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-sm shadow-sm"
         />
       </div>
@@ -113,18 +113,25 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
             <input type="hidden" name="jobId" value={preselectedJobId} />
           </div>
         ) : (
-          <select 
-            name="jobId" 
-            id="jobId"
-            required
-            className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-sm shadow-sm"
-          >
-            <option value="">Select a position...</option>
-            <option value="general">General Application</option>
-            {jobs.map(job => (
-              <option key={job.id} value={job.id}>{job.title}</option>
-            ))}
-          </select>
+          <div className="relative">
+            <select 
+              name="jobId" 
+              id="jobId"
+              required
+              className="w-full bg-white border border-slate-200 rounded-lg pl-4 pr-10 py-3 text-slate-800 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all text-sm shadow-sm appearance-none cursor-pointer"
+            >
+              <option value="">Select a position...</option>
+              <option value="general">General Application</option>
+              {jobs.map(job => (
+                <option key={job.id} value={job.id}>{job.title}</option>
+              ))}
+            </select>
+            <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-500">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </div>
         )}
       </div>
 
@@ -135,7 +142,7 @@ export default function CareerApplicationForm({ jobs, preselectedJobId, onSucces
           id="coverLetter" 
           rows={4} 
           required
-          placeholder="Briefly tell us why you want to build the future of aerospace at MIVA..."
+          placeholder="Tell us why do you want to work with us..."
           className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-slate-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all resize-none text-sm leading-relaxed shadow-sm"
         ></textarea>
       </div>

@@ -38,7 +38,7 @@ export default async function AdminPage() {
   const contactMessages = contactsResult.success ? contactsResult.messages : [];
 
   return (
-    <div className="min-h-screen px-4 sm:px-6 lg:px-8 bg-background">
+    <div className="min-h-screen px-4 sm:px-6 lg:px-8 bg-background pt-36">
       <AdminDashboard 
         jobs={jobs} 
         applications={applications} 

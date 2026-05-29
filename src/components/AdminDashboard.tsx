@@ -14,6 +14,11 @@ interface AdminDashboardProps {
 export default function AdminDashboard({ jobs, applications, contactMessages }: AdminDashboardProps) {
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<"positions" | "applications" | "contacts">("positions");
+  const [expandedApps, setExpandedApps] = useState<Record<string, boolean>>({});
+
+  const toggleApp = (id: string) => {
+    setExpandedApps(prev => ({ ...prev, [id]: !prev[id] }));
+  };
 
   const handleCreateJob = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -54,10 +59,6 @@ export default function AdminDashboard({ jobs, applications, contactMessages }: 
         alert("Failed to delete message.\nError: " + (result?.error || "Unknown"));
       }
     }
-  };
-
-  const formatNewlines = (text: string) => {
-    return text.split('\n').map((str, idx) => <p key={idx}>{str}</p>);
   };
 
   return (
@@ -207,10 +208,21 @@ export default function AdminDashboard({ jobs, applications, contactMessages }: 
                   </div>
 
                   <div className="text-sm font-light text-slate-600 space-y-2 max-w-4xl">
-                    <p className="text-xs uppercase font-semibold tracking-wider text-slate-400">Cover Letter</p>
-                    <div className="whitespace-pre-wrap leading-relaxed bg-white p-4 rounded-lg border border-slate-200">
-                      {formatNewlines(app.coverLetter)}
-                    </div>
+                    <button
+                      onClick={() => toggleApp(app.id)}
+                      className="text-xs uppercase font-bold tracking-wider text-[#0f2042] hover:text-[#152c5c] flex items-center gap-2 border border-slate-200 bg-white px-3.5 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors focus:outline-none"
+                    >
+                      <FileText size={13} className="text-primary" />
+                      <span>Cover Letter</span>
+                      <span className="text-[10px] text-slate-400 font-light lowercase">
+                        ({expandedApps[app.id] ? "click to hide" : "click to view"})
+                      </span>
+                    </button>
+                    {expandedApps[app.id] && (
+                      <div className="whitespace-pre-wrap leading-relaxed bg-white p-4 rounded-xl border border-slate-200 text-slate-700 font-light mt-2 shadow-inner">
+                        {app.coverLetter}
+                      </div>
+                    )}
                   </div>
 
                   {app.resumeData && app.resumeName && (
@@ -261,8 +273,8 @@ export default function AdminDashboard({ jobs, applications, contactMessages }: 
 
                   <div className="text-sm font-light text-slate-600 space-y-2 max-w-4xl">
                     <p className="text-xs uppercase font-semibold tracking-wider text-slate-400">Message Content</p>
-                    <div className="whitespace-pre-wrap leading-relaxed bg-white p-4 rounded-lg border border-slate-200">
-                      {formatNewlines(msg.message)}
+                    <div className="whitespace-pre-wrap leading-relaxed bg-white p-4 rounded-lg border border-slate-200 text-slate-700 font-light">
+                      {msg.message}
                     </div>
                   </div>
                 </div>

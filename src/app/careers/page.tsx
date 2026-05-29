@@ -61,7 +61,7 @@ export default async function CareersPage() {
           <div className="lg:col-span-6">
             <div className="relative h-[300px] md:h-[400px] w-full rounded-3xl overflow-hidden border border-border shadow-md bg-muted">
               <Image
-                src="/aircraft_platform.png"
+                src="/hiringpage.png"
                 alt="Aircraft Engineering Systems Model"
                 fill
                 className="object-cover"
