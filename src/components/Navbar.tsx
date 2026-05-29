@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-3">
               <div className="relative w-9 h-9">
                 <Image 
-                  src="/logo_image.png"
+                  src="/logo_img.png"
                   alt="MIVΛ Logo"
                   fill
                   className="object-contain"
