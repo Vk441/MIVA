@@ -8,12 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column (Company name, addresses, contact details, social links) */}
           <div className="lg:col-span-7 space-y-4 text-left">
-            <div className="flex items-center gap-3">
-              <Link href="/" className="text-xl font-black tracking-widest uppercase block text-[#0f2042]">
+            <div className="space-y-1.5">
+              <Link href="/" className="text-2xl font-black tracking-widest uppercase block text-[#0f2042]">
                 MIVΛ
               </Link>
-              <span className="w-1.5 h-1.5 rounded-full bg-primary/30" />
-              <p className="font-bold text-primary uppercase tracking-wider text-[11px]">
+              <p className="font-bold text-primary uppercase tracking-wider text-[11px] block">
                 Miva Aerospace & Defence Technology LLP
               </p>
             </div>
