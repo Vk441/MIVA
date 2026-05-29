@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MIVΛ | Empowering the Sky",
+  title: "MIVA | Empowering the Sky",
   description: "Advanced aerospace and defense drone manufacturing for a secure future.",
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "MIVΛ Aerospace",
+              "name": "MIVA Aerospace",
               "url": "https://www.miva.com",
               "logo": "https://www.miva.com/hero_drone_bg.png",
               "description": "Advanced aerospace and defense drone manufacturing for a secure future.",

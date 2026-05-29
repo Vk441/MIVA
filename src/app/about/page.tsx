@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
-      {/* The MIVΛ Approach */}
+      {/* The MIVA Approach */}
       <section id="overview" className="pt-36 pb-8 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full scroll-mt-20">
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Overview</h3>
         <h2 className="text-3xl font-medium tracking-wide mb-6 text-primary">
@@ -27,13 +27,14 @@ export default function AboutPage() {
         </div>
         
         {/* Main Hero Drone Image placed right after Overview section, compact and premium */}
-        <div className="max-w-4xl mx-auto w-full relative h-[250px] md:h-[380px] lg:h-[450px] overflow-hidden rounded-2xl mt-6 mb-16 bg-[#fafafc] border border-border/85 shadow-sm flex items-center justify-center">
+        <div className="max-w-4xl mx-auto w-full mt-6 mb-16 border border-border/80 shadow-sm rounded-2xl overflow-hidden bg-white">
           <Image
-            src="/vision_img.png"
-            alt="MIVΛ Advanced Aerospace Drone"
-            fill
+            src="/hero_drone_bg.png"
+            alt="MIVA Advanced Aerospace Drone"
+            width={1200}
+            height={680}
             priority
-            className="object-contain"
+            className="w-full h-auto object-contain"
             sizes="(max-width: 768px) 100vw, 80vw"
           />
         </div>
@@ -85,7 +86,7 @@ export default function AboutPage() {
             Collaborating with Visionaries
           </h2>
           <p className="text-muted-foreground font-light leading-relaxed text-base max-w-4xl">
-            MIVΛ is built by a world-class team of aerospace designers, control systems specialists, artificial intelligence engineers, and tactical deployment experts. Operating at the intersections of advanced computing and hard physical engineering, we foster a culture centered on curiosity, imagination, and extreme ownership.
+            MIVA is built by a world-class team of aerospace designers, control systems specialists, artificial intelligence engineers, and tactical deployment experts. Operating at the intersections of advanced computing and hard physical engineering, we foster a culture centered on curiosity, imagination, and extreme ownership.
           </p>
         </div>
 
@@ -93,7 +94,7 @@ export default function AboutPage() {
         <div id="story" className="bg-muted rounded-3xl p-8 md:p-12 border border-border scroll-mt-24">
           <h2 className="text-xl font-bold uppercase tracking-wider text-primary mb-6">Our Story</h2>
           <p className="text-muted-foreground font-light leading-relaxed text-sm mb-6">
-            Founded with the singular vision of securing skies through high-end domestic engineering, MIVΛ has rapidly matured from drafting blueprints to conducting real-world aerodynamic flight testing. 
+            Founded with the singular vision of securing skies through high-end domestic engineering, MIVA has rapidly matured from drafting blueprints to conducting real-world aerodynamic flight testing. 
           </p>
           <p className="text-muted-foreground font-light leading-relaxed text-sm">
             We are working directly with strategic aerospace entities and defense advisors to expand capabilities, streamline domestic assembly hubs, and deploy defense assets that are built with precision, for precision, in India and for the world.
