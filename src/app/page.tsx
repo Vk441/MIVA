@@ -275,6 +275,7 @@ export default function Home() {
               <div className="absolute right-[-20px] bottom-[-20px] w-[150px] h-[150px] rounded-full bg-primary/[0.02] pointer-events-none" />
             </div>
           </div>
+        </div>
       </section>
 
       {/* Careers Section Preview */}
