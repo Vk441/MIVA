@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-3">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-9 h-9">
+              <div className="relative w-12 h-12">
                 <Image 
                   src="/logo_img.png"
                   alt="MIVΛ Logo"
