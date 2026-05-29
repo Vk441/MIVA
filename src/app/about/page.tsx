@@ -29,7 +29,7 @@ export default function AboutPage() {
         {/* Main Hero Drone Image placed right after Overview section, compact and premium */}
         <div className="max-w-4xl mx-auto w-full mt-6 mb-16 border border-border/80 shadow-sm rounded-2xl overflow-hidden bg-white">
           <Image
-            src="/hero_drone_bg.png"
+            src="/vision_img.png"
             alt="MIVA Advanced Aerospace Drone"
             width={1200}
             height={680}
