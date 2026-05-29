@@ -219,20 +219,6 @@ export default function TermsOfUsePage() {
                 </div>
               </div>
             ))}
-
-            {/* Validation & Consent Acceptance Card */}
-            <div className="bg-muted border border-border p-6 md:p-8 rounded-3xl text-center space-y-4">
-              <h3 className="text-sm font-black uppercase tracking-wider text-[#0f2042]">Agreement Verification</h3>
-              <p className="text-xs text-muted-foreground font-light max-w-md mx-auto leading-relaxed">
-                In compliance with the Information Technology Act, 2000, continuing to use this platform constitutes a legally valid, binding electronic record. No physical signature is required.
-              </p>
-              <Link
-                href="/"
-                className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-widest text-white bg-primary px-8 py-3.5 rounded-full hover:bg-primary/95 transition-colors shadow-sm"
-              >
-                Accept & Proceed
-              </Link>
-            </div>
           </div>
         </div>
       </div>
