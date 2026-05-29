@@ -26,13 +26,13 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-foreground bg-background">
+    <div className="flex flex-col min-h-screen pt-36 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-foreground bg-background">
       <div className="text-center mb-16 pt-4">
         <span className="text-[10px] font-bold uppercase tracking-widest bg-primary/10 text-primary border border-primary/15 px-3.5 py-1.5 rounded-full mb-4 inline-block">
           Get in Touch
         </span>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-primary mt-2">
-          Contact <span className="text-muted-foreground font-light">MIVA</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#0f2042] mt-2">
+          Contact <span className="text-primary font-black">MIVΛ</span>
         </h1>
         <div className="h-[2px] w-12 bg-primary mx-auto my-6 rounded"></div>
         <p className="text-base md:text-lg text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">

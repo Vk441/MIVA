@@ -24,16 +24,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center gap-3">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-border/40 shadow-sm">
+              <div className="relative w-9 h-9">
                 <Image 
-                  src="/logo_image.png"
-                  alt="MIVA Logo"
+                  src="/logo.png"
+                  alt="MIVΛ Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
-              <span className="text-xl font-bold tracking-wider uppercase text-primary">
-                MIVA
+              <span className="text-2xl font-black tracking-widest text-[#0f2042]">
+                MIVΛ
               </span>
             </Link>
           </div>

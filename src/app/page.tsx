@@ -21,7 +21,7 @@ export default function Home() {
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-6">About Us</h3>
         <div className="max-w-5xl space-y-6">
           <p className="text-xl md:text-2xl font-light leading-relaxed text-primary">
-            MIVA Aerospace and Defence Technology is a pioneering, high-precision aerospace and defence systems startup engineered from the ground up for the indigenous design, engineering, and manufacturing of advanced tactical Unmanned Aerial Systems (UAS).
+            MIVΛ Aerospace and Defence Technology is a pioneering, high-precision aerospace and defence systems startup engineered from the ground up for the indigenous design, engineering, and manufacturing of advanced tactical Unmanned Aerial Systems (UAS).
           </p>
           <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto">
             We specialise in building modular, mission-ready platforms — spanning multirotor, fixed-wing, and high-end VTOL configurations — fully optimized to withstand and dominate the extreme operational environments of modern national defence sectors.
@@ -282,7 +282,7 @@ export default function Home() {
       <section className="py-24 px-4 md:px-12 lg:px-24 max-w-5xl mx-auto w-full text-center">
         <h3 className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">Careers</h3>
         <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-primary mb-12">
-          Join MIVA Systems
+          Join MIVΛ Systems
         </h2>
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
           <div className="relative w-full h-[300px] md:h-[380px] rounded-3xl mb-8 overflow-hidden border border-border shadow-sm">
