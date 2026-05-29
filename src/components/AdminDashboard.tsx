@@ -71,7 +71,7 @@ export default function AdminDashboard({ jobs, applications, contactMessages }: 
         </div>
         <button 
           onClick={() => adminLogout()}
-          className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest border border-red-200 px-4 py-2.5 rounded-lg hover:bg-red-50 text-red-600 transition-colors"
+          className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-white border border-[#0f2042] text-[#0f2042] px-4 py-2.5 rounded-lg hover:bg-[#0f2042]/5 active:bg-[#0f2042] active:text-white transition-all duration-200"
         >
           <LogOut size={14} /> Disconnect
         </button>
