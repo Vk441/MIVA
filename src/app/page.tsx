@@ -20,11 +20,11 @@ export default function Home() {
       <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-6">About Us</h3>
         <div className="max-w-5xl space-y-6">
-          <p className="text-xl md:text-2xl font-light leading-relaxed text-primary">
+          <p className="text-xl md:text-2xl font-light leading-relaxed text-primary text-justify">
             MIVA Aerospace and Defence Technology is a pioneering, high-precision aerospace and defence systems startup engineered from the ground up for the indigenous design, engineering, and manufacturing of advanced tactical Unmanned Aerial Systems (UAS).
           </p>
-          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto">
-            We specialise in building modular, mission-ready platforms — spanning multirotor, fixed-wing, and high-end VTOL configurations — fully optimized to withstand and dominate the extreme operational environments of modern national defence sectors.
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto text-justify">
+            We specialise in building modular, mission-ready platforms multirotor, fixed-wing, and high-end VTOL configurations fully optimized to withstand and dominate the extreme operational environments of modern national defence sectors.
           </p>
         </div>
         
@@ -91,7 +91,7 @@ export default function Home() {
               <div className="p-6 space-y-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">01 • Topography</span>
                 <h3 className="text-lg font-bold tracking-wide text-primary">Mapping & Surveying</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed">
+                <p className="text-xs font-light text-muted-foreground leading-relaxed text-justify">
                   Generating millimeter-accurate 3D CAD meshes, orthomosaic maps, and topography analysis for engineering projects, mining, and forestry using built-in sensor arrays.
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function Home() {
               <div className="p-6 space-y-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">02 • Security</span>
                 <h3 className="text-lg font-bold tracking-wide text-primary">Surveillance</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed">
+                <p className="text-xs font-light text-muted-foreground leading-relaxed text-justify">
                   Continuous day-and-night observation and threat monitoring for strategic border corridors, critical infrastructure protection, and emergency reconnaissance.
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function Home() {
               <div className="p-6 space-y-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">03 • Defense</span>
                 <h3 className="text-lg font-bold tracking-wide text-primary">Warfare</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed">
+                <p className="text-xs font-light text-muted-foreground leading-relaxed text-justify">
                   Deploying tactical defensive capability, target acquisition, jam-resistant flight logic, and secure edge networks in highly contested airspace environments.
                 </p>
               </div>
@@ -195,9 +195,6 @@ export default function Home() {
               </p>
               <div className="pt-2 space-y-2 text-xs font-semibold text-primary">
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Custom Micro-Turbine Hybrid Engines
-                </div>
-                <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Advanced Flight Control Computers (FCC)
                 </div>
                 <div className="flex items-center gap-2">
@@ -224,9 +221,6 @@ export default function Home() {
                 <p className="text-xs text-muted-foreground font-light leading-relaxed">
                   Our domestic engineering focus enhances aerospace designs and ensures reliable local support and compliance.
                 </p>
-              </div>
-              <div className="pt-4 border-t border-border flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-semibold text-primary">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" /> Indian Design & Development
               </div>
             </div>
           </div>

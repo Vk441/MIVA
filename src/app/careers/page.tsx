@@ -18,7 +18,7 @@ export default async function CareersPage() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
       {/* Hero */}
-      <section className="relative pt-20 h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative pt-32 pb-8 h-auto flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/about_vision.png"
@@ -30,14 +30,14 @@ export default async function CareersPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-4">
-          <span className="text-[10px] font-bold uppercase tracking-widest bg-primary/10 text-primary border border-primary/15 px-3.5 py-1.5 rounded-full">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-2 pt-2">
+          <span className="text-[10px] font-extrabold uppercase tracking-widest bg-primary/10 text-primary border border-primary/15 px-3.5 py-1.5 rounded-full inline-block">
             Join the Mission
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-primary pt-2">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-wider text-[#0f2042] pt-1">
             Invent the future of flight
           </h1>
-          <p className="text-sm md:text-base text-muted-foreground font-light max-w-2xl mx-auto">
+          <p className="text-xs md:text-sm text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed pt-1.5">
             We are building technologies that redefine flight. Join us in engineering self-reliant systems designed for uncompromised security.
           </p>
         </div>
