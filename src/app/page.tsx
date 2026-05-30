@@ -20,10 +20,10 @@ export default function Home() {
       <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-6">About Us</h3>
         <div className="max-w-5xl space-y-6">
-          <p className="text-xl md:text-2xl font-light leading-relaxed text-primary text-justify">
+          <p className="text-xl md:text-2xl font-light leading-relaxed text-primary">
             MIVA Aerospace and Defence Technology is a pioneering, high-precision aerospace and defence systems startup engineered from the ground up for the indigenous design, engineering, and manufacturing of advanced tactical Unmanned Aerial Systems (UAS).
           </p>
-          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto text-justify">
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-4xl mx-auto">
             We specialise in building modular, mission-ready platforms multirotor, fixed-wing, and high-end VTOL configurations fully optimized to withstand and dominate the extreme operational environments of modern national defence sectors.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto w-full">
           <h3 className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">Deployment</h3>
           <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-primary mb-4">
-            Product Applications
+            PRODUCT APPLICATIONS
           </h2>
           <p className="text-sm text-muted-foreground font-light max-w-2xl mx-auto mb-16 leading-relaxed">
             Our autonomous aircraft platforms are engineered to perform high-value operational tasks across strategic civil and national security industries.
@@ -91,7 +91,7 @@ export default function Home() {
               <div className="p-6 space-y-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">01 • Topography</span>
                 <h3 className="text-lg font-bold tracking-wide text-primary">Mapping & Surveying</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed text-justify">
+                <p className="text-xs font-light text-muted-foreground leading-relaxed">
                   Generating millimeter-accurate 3D CAD meshes, orthomosaic maps, and topography analysis for engineering projects, mining, and forestry using built-in sensor arrays.
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function Home() {
               <div className="p-6 space-y-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">02 • Security</span>
                 <h3 className="text-lg font-bold tracking-wide text-primary">Surveillance</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed text-justify">
+                <p className="text-xs font-light text-muted-foreground leading-relaxed">
                   Continuous day-and-night observation and threat monitoring for strategic border corridors, critical infrastructure protection, and emergency reconnaissance.
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function Home() {
               <div className="p-6 space-y-3">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">03 • Defense</span>
                 <h3 className="text-lg font-bold tracking-wide text-primary">Warfare</h3>
-                <p className="text-xs font-light text-muted-foreground leading-relaxed text-justify">
+                <p className="text-xs font-light text-muted-foreground leading-relaxed">
                   Deploying tactical defensive capability, target acquisition, jam-resistant flight logic, and secure edge networks in highly contested airspace environments.
                 </p>
               </div>
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Vision & Capabilities</h3>
             <h2 className="text-3xl md:text-4xl font-medium tracking-wide text-primary">
-              Engineering Indigenous Dominance
+              ENGINEERING INDIGENOUS DOMINANCE
             </h2>
             <div className="h-[2px] w-12 bg-primary mx-auto my-6 rounded"></div>
           </div>

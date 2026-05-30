@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section id="overview" className="pt-36 pb-8 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full scroll-mt-20">
         <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Overview</h3>
         <h2 className="text-3xl font-medium tracking-wide mb-6 text-primary">
-          The MIVA approach
+          THE MIVA APPROACH
         </h2>
         <div className="max-w-4xl">
           <p className="text-muted-foreground font-light leading-relaxed mb-6 text-base md:text-lg">
@@ -40,33 +40,33 @@ export default function AboutPage() {
         </div>
 
         {/* Our Team Section Anchor */}
-        <div id="team" className="scroll-mt-24 mb-12 border-t border-border pt-16">
+        <div id="team" className="scroll-mt-24 mb-12 border-t border-border pt-12">
           <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Our Team</h3>
-          <h2 className="text-3xl font-medium tracking-wide mb-6 text-primary">
-            Collaborating with Visionaries
+          <h2 className="text-3xl font-medium tracking-wide mb-8 text-primary">
+            COLLABORATING WITH VISIONARIES
           </h2>
-          <p className="text-muted-foreground font-light leading-relaxed text-base max-w-4xl text-justify">
+          <p className="text-muted-foreground font-light leading-relaxed text-base max-w-4xl">
             MIVA is built by a team of aerospace designers, control systems specialists, artificial intelligence engineers, and tactical deployment experts. Operating at the intersections of advanced computing and hard physical engineering, we foster a culture centered on curiosity, imagination, and extreme ownership.
           </p>
         </div>
 
         {/* The Road Ahead / Our Story */}
-        <div id="story" className="bg-muted rounded-3xl p-6 md:p-8 border border-border scroll-mt-24 mb-16">
-          <h2 className="text-xl font-bold uppercase tracking-wider text-primary mb-4">Our Story</h2>
-          <p className="text-muted-foreground font-light leading-relaxed text-sm mb-4 text-justify">
+        <div id="story" className="bg-muted rounded-3xl p-8 md:p-12 border border-border scroll-mt-24 mb-12">
+          <h2 className="text-xl font-bold uppercase tracking-wider text-primary mb-6">Our Story</h2>
+          <p className="text-muted-foreground font-light leading-relaxed text-sm mb-6">
             Founded with the singular vision of securing skies through high-end domestic engineering, MIVA has rapidly matured from drafting blueprints to conducting real-world aerodynamic flight testing. 
           </p>
-          <p className="text-muted-foreground font-light leading-relaxed text-sm text-justify">
+          <p className="text-muted-foreground font-light leading-relaxed text-sm">
             We are working directly with strategic aerospace entities and defense advisors to expand capabilities, streamline domestic assembly hubs, and deploy defense assets that are built with precision, for precision, in India and for the world.
           </p>
         </div>
 
         {/* Timeline Roadmap Section (Attractive and Brand Aligned) */}
-        <div className="border-t border-border pt-24 mb-12">
+        <div className="border-t border-border pt-12 mb-12">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">Milestones</h3>
-              <h2 className="text-3xl font-medium tracking-wide text-primary">Roadmap</h2>
+              <h2 className="text-3xl font-medium tracking-wide text-primary">ROADMAP</h2>
               <div className="h-[2px] w-12 bg-primary mx-auto my-6 rounded"></div>
             </div>
             
