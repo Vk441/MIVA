@@ -9,7 +9,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="w-full pt-20">
         <HeroSlideshow />
-        <div className="text-center mt-14 mb-8 select-none px-4">
+        <div className="text-center mt-14 mb-0 select-none px-4">
           <p className="text-3xl md:text-5xl font-extrabold tracking-[0.25em] uppercase text-[#0f2042]">
             Empowering the Sky
           </p>
@@ -17,8 +17,8 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
-        <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-6">About Us</h3>
+      <section className="pt-6 pb-24 px-4 md:px-12 lg:px-24 max-w-7xl mx-auto w-full flex flex-col items-center text-center">
+        <h3 className="text-xs font-semibold tracking-widest text-[#0f2042]/60 uppercase mb-4">About Us</h3>
         <div className="max-w-5xl space-y-6">
           <p className="text-xl md:text-2xl font-light leading-relaxed text-primary">
             MIVA Aerospace and Defence Technology is a pioneering, high-precision aerospace and defence systems startup engineered from the ground up for the indigenous design, engineering, and manufacturing of advanced tactical Unmanned Aerial Systems (UAS).

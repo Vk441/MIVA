@@ -52,7 +52,7 @@ export default function AboutPage() {
 
         {/* The Road Ahead / Our Story */}
         <div id="story" className="bg-muted rounded-3xl p-8 md:p-12 border border-border scroll-mt-24 mb-12">
-          <h2 className="text-xl font-bold uppercase tracking-wider text-primary mb-6">Our Story</h2>
+          <h2 className="text-xl font-bold uppercase tracking-wider text-primary mb-2.5">Our Story</h2>
           <p className="text-muted-foreground font-light leading-relaxed text-sm mb-6">
             Founded with the singular vision of securing skies through high-end domestic engineering, MIVA has rapidly matured from drafting blueprints to conducting real-world aerodynamic flight testing. 
           </p>
